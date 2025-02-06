@@ -1,0 +1,6 @@
+.access.php
+.env
+/bitrix
+/upload
+/local/vendor/
+/node_modules
