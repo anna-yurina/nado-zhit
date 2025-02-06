@@ -83,29 +83,7 @@ IncludeTemplateLangFile(__FILE__);
 
 			<div id="content-wrapper">
 				<div id="content">
-				<?if($APPLICATION->GetCurPage(false)==SITE_DIR):?>
-					<div id="banner">
-						<div id="banner-image"><?$APPLICATION->IncludeFile(
-									SITE_DIR."include/banner.php",
-									Array(),
-									Array("MODE"=>"html")
-								);?></div>
-						<table cellspacing="0" id="banner-text">
-							<tr>
-								<td width="35%">&nbsp;</td>
-								<td>
-								<?$APPLICATION->IncludeFile(
-									SITE_DIR."include/banner_text.php",
-									Array(),
-									Array("MODE"=>"text")
-								);?>
-								</td>
-							</tr>
-						</table>
-						<div id="banner-overlay"></div>
-					</div>
-				<?else:?>
-					<div id="breadcrumb">
+									<div id="breadcrumb">
 						<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", ".default", array(
 	"START_FROM" => "1",
 	"PATH" => "",
@@ -114,7 +92,6 @@ IncludeTemplateLangFile(__FILE__);
 	false
 );?>
 					</div>
-				<?endif?>
 					<div id="workarea-wrapper">
 						<div id="left-menu">
 						<?$APPLICATION->IncludeComponent("bitrix:menu", "tree", array(
