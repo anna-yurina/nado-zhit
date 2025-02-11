@@ -34,7 +34,7 @@ form.main-form
 
 td#logo { padding-left: 32px;}
 td#logo a { outline: none;}
-td#slogan { padding-left: 32px; width: 100%;  font-size: 1.2em; font-style: italic; /*font-weight: bold;*/}
+td#slogan { padding-left: 32px; width: 100%;  font-size: 1.2em; font-family: "Georgia"; font-style: normal; /*font-weight: bold;*/}
 
 #search { width: 23%; position: absolute; right:21px; top: 30px; }
 #search div.flat{height: 20px;}							 
@@ -43,6 +43,7 @@ td#slogan { padding-left: 32px; width: 100%;  font-size: 1.2em; font-style: ital
 	border: 1px solid; 
 	height: 20px;
 	overflow:hidden;
+
 	padding:0;
 	position: absolute;
 	left: 21px;
