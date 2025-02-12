@@ -109,15 +109,6 @@ div.search-item h4 { margin-bottom: 0.4em;}
 #top-menu li.selected .r1 { width: expression(runtimeStyle.width = parentNode.offsetWidth - 4 + 'px'); }
 #top-menu li.selected .r0 { width: expression(runtimeStyle.width = parentNode.offsetWidth - 2 + 'px'); }
 
-#breadcrumb  {	padding:0; margin: 0 41px 32px 32px;}
-#breadcrumb p { margin: 0 10px;}
-
-#breadcrumb span.bx-breadcrumbs-name { font-size: 0.85em; padding:0 0.4em;}
-#breadcrumb a {text-decoration: none;}
-#breadcrumb a:hover { text-decoration: underline;}
-#breadcrumb b { border-right: 1px solid; border-left: 1px solid;}
-#breadcrumb b.top { margin-bottom: 2px;}
-#breadcrumb b.bottom { margin-top: 2px;}
 
 #content-wrapper { overflow: hidden; margin: 21px 0 50px; zoom:1;}
 #content { float: left; width: 77%; overflow: hidden; }

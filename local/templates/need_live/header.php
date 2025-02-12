@@ -83,14 +83,18 @@ IncludeTemplateLangFile(__FILE__);
 
 			<div id="content-wrapper">
 				<div id="content">
-									<div id="breadcrumb">
+                    <div id="breadcrumb">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
 						<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "custom_breadcrumb", array(
-	"START_FROM" => "1",
-	"PATH" => "",
-	"SITE_ID" => SITE_ID
-	),
-	false
-);?>
+                            "START_FROM" => "1",
+                            "PATH" => "",
+                            "SITE_ID" => SITE_ID
+                            ),
+                            false
+                        );?>
+                            </ol>
+                        </nav>
 					</div>
 					<div id="workarea-wrapper">
 						<div id="left-menu">

@@ -5,8 +5,8 @@ a:visited {color:#006BC6;}
 a:hover {color:#F65529;}
 a:active {color:#006BC6;}
 
-h1 { color:#F65529; }
-h2, h3, h4, h5, h6 { color:#414141; }
+
+h1, h2, h3, h4, h5, h6 { color:#414141; }
 
 hr, .hr { border-color: #E9E9E9;}
 
@@ -25,10 +25,6 @@ td#slogan { color: #999999; }
 #top-menu li.selected b { background: #0D4BB1;}
 #top-menu li.selected .r1 { border-color: #82A2D7;}
 #top-menu li.selected .r0 { border-color: #7FA0D6;}
-
-#breadcrumb { background-color:#F0F0F0; color: #7A7A7A;	 }
-#breadcrumb a, #breadcrumb span { color: #7A7A7A; }
-#breadcrumb b { border-color: #FBFBFB;}
 
 /* Root items*/
 ul.left-menu a { color: #414141; }
