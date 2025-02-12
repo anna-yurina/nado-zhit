@@ -8,25 +8,35 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Новости", 
-		"news/", 
+		"Романы",
+		"romans/",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Услуги", 
-		"services/", 
+		"Рассказы",
+		"stories/",
 		Array(), 
 		Array(), 
 		"" 
 	),
-	Array(
-		"Контакты", 
-		"contacts/", 
-		Array(), 
-		Array(), 
-		"" 
-	)
+
+    Array(
+        "Прожито",
+        "lived/",
+        Array(),
+        Array(),
+        ""
+    ),
+
+    Array(
+        "Альбом для гостей",
+        "guest_album/",
+        Array(),
+        Array(),
+        ""
+    ),
+
 );
 ?>

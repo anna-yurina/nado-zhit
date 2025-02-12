@@ -56,14 +56,14 @@ IncludeTemplateLangFile(__FILE__);
 				</table>
 
 
-				<div id="search">
-				<?$APPLICATION->IncludeComponent("bitrix:search.form", "flat", array(
+<!--				<div id="search">
+				<?/*$APPLICATION->IncludeComponent("bitrix:search.form", "flat", array(
 					"PAGE" => "#SITE_DIR#search/index.php"
 					),
 					false
-				);?>
+				);*/?>
 				</div>
-			</div>
+-->			</div>
 
 <?$APPLICATION->IncludeComponent("bitrix:menu", "top", array(
 	"ROOT_MENU_TYPE" => "top",
@@ -84,7 +84,7 @@ IncludeTemplateLangFile(__FILE__);
 			<div id="content-wrapper">
 				<div id="content">
 									<div id="breadcrumb">
-						<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", ".default", array(
+						<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "custom_breadcrumb", array(
 	"START_FROM" => "1",
 	"PATH" => "",
 	"SITE_ID" => SITE_ID

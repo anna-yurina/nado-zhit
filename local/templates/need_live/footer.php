@@ -4,54 +4,7 @@
 					</div>
 					
 				</div>
-				
-				<div id="sidebar">
-					<div id="sidebar-inner">
-					
-						<div id="telephone"><nobr><?$APPLICATION->IncludeFile(
-									SITE_DIR."include/phone.php",
-									Array(),
-									Array("MODE"=>"html")
-								);?></nobr></div>
-						
-						<div id="schedule"><div class="schedule">
-						<?$APPLICATION->IncludeFile(
-									SITE_DIR."include/shedule.php",
-									Array(),
-									Array("MODE"=>"html")
-								);?>
-						</div></div>
-						
-						<div id="support">
-							<div id="support-question"></div>
-							<b class="r0"></b>
-							<div id="support-text"><a href="<?=SITE_DIR?>contacts/feedback.php"><?=GetMessage("HDR_ASK")?></a></div>	
-							<b class="r0"></b>
-						</div>
 
-					<?$APPLICATION->IncludeComponent(
-						"bitrix:main.include",
-						".default",
-						Array(
-							"AREA_FILE_SHOW" => "page", 
-							"AREA_FILE_SUFFIX" => "inc", 
-							"AREA_FILE_RECURSIVE" => "N", 
-							"EDIT_MODE" => "html", 
-							"EDIT_TEMPLATE" => "page_inc.php" 
-							)
-					);?><?$APPLICATION->IncludeComponent(
-						"bitrix:main.include",
-						".default",
-						Array(
-							"AREA_FILE_SHOW" => "sect", 
-							"AREA_FILE_SUFFIX" => "inc", 
-							"AREA_FILE_RECURSIVE" => "Y", 
-							"EDIT_MODE" => "html", 
-							"EDIT_TEMPLATE" => "sect_inc.php" 
-						)
-					);?>
-					</div>
-				</div>
 			</div>
 	
 			<div id="space-for-footer"></div>
