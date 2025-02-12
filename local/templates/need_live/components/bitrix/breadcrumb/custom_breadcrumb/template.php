@@ -8,7 +8,6 @@ if(empty($arResult))
 if($arResult[count($arResult)-1]["LINK"]!="" && $arResult[count($arResult)-1]["LINK"]!=$GLOBALS["APPLICATION"]->GetCurPage(false))
 	$arResult[] = Array("TITLE"=>$GLOBALS["APPLICATION"]->GetTitle());
 ?>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <nav aria-label="breadcrumb">
 	<ol class="breadcrumb">
 		<?php
