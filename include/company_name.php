@@ -1,1 +1,0 @@
-<img src="/include/nado-zhit_logo.gif"  />
