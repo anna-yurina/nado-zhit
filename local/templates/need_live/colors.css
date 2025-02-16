@@ -1,11 +1,5 @@
 /* Text */
 
-a:link {color:#006BC6;}
-a:visited {color:#006BC6;}
-a:hover {color:#F65529;}
-a:active {color:#006BC6;}
-
-
 h1, h2, h3, h4, h5, h6 { color:#414141; }
 
 hr, .hr { border-color: #E9E9E9;}
@@ -20,7 +14,6 @@ td#slogan { color: #999999; }
 #search-button input { 	 color: #9B9B9B; }
 
 #top-menu a { border-color: #EDEDED; color: #000; }
-#top-menu a:hover { border-color: #0D4BB1; }
 #top-menu li.selected a { color: #fff; background: #0D4BB1; border-color: #0D4BB1; }
 #top-menu li.selected b { background: #0D4BB1;}
 #top-menu li.selected .r1 { border-color: #82A2D7;}
