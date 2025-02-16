@@ -115,5 +115,7 @@ IncludeTemplateLangFile(__FILE__);
 						</div>
 						<div id="workarea">
 							<div id="workarea-inner">
-							<h5><?$APPLICATION->ShowTitle(false);?></h5>
+							<h5 class="h5-custom">
+                                <?$APPLICATION->ShowTitle(false);?>
+                                </h5>
 

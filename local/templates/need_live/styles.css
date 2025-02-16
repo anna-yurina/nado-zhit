@@ -51,3 +51,13 @@ table.data-table { width: 100%; border-bottom: 1px solid #F0F0F0; border-top: 1p
 table.data-table th { text-align: left;}
 table.data-table td, table.data-table th { padding: 1em; font-size: 0.85em;}
 table.data-table tr.alt-row { background-color: #F0F0F0; }
+
+.h5-custom {
+	border:1px solid #E5E5E5;
+	border-radius: 20px;
+	font-size:140%;
+	font-weight:normal;
+	/*margin:0 0 1.1em;*/
+	padding:1em;
+	box-shadow: 5px 5px 20px 2px #E5E5E5;
+}

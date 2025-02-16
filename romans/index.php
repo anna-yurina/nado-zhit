@@ -8,7 +8,7 @@ $APPLICATION->SetTitle("Романы");
 <?
 $APPLICATION->IncludeComponent(
     "bitrix:news",
-    "",
+    "bootstrap_v4",
     [
         'SEF_MODE' => 'Y',
         'SEF_FOLDER' => '/romans/',
