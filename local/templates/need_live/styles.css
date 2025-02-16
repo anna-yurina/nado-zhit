@@ -61,3 +61,43 @@ table.data-table tr.alt-row { background-color: #F0F0F0; }
 	padding:1em;
 	box-shadow: 5px 5px 20px 2px #E5E5E5;
 }
+
+.custom-span {
+	font-family: "Bradley Hand ITC", cursive;
+	font-size: 32px;
+	font-style: italic;
+	margin-top: 120px;
+}
+
+
+.custom-wrapper {
+	margin-left: 50px!important;
+}
+
+.custom-nature {
+	position: absolute;
+	width: 800px;
+	height: 300px;
+	top: 0;
+	right: 0;
+}
+
+.custom-menu {
+	margin-top: 20px;
+	font-family: "Bradley Hand ITC", cursive!important;
+	font-size: 24px;
+	font-style: italic;
+}
+
+.custom-logo {
+	color: green;
+	text-decoration: none;
+}
+
+.custom-logo-div {
+	font-family: "Bradley Hand ITC", cursive;
+	font-size: 92px;
+	font-style: italic;
+	margin-top: 50px;
+	margin-left: 150px;
+}

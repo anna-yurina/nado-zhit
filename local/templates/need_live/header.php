@@ -35,50 +35,48 @@ IncludeTemplateLangFile(__FILE__);
 
 </head>
 <body>
-		<div id="page-wrapper">
+		<div id="page-wrapper" class="custom-wrapper">
+
+            <div id="header">
+                <div class="d-flex justify-content-beetween">
+                    <div>
+                        <div class="custom-logo-div">
+                            <a href="<?= SITE_DIR ?>" class="custom-logo">
+                                Надо жить!
+                            </a>
+                        </div>
+                        <div id="slogan" class="custom-span">
+                            <span><? $APPLICATION->IncludeFile(
+                                    SITE_DIR . "include/company_slogan.php",
+                                    array(),
+                                    array("MODE" => "html")
+                                ); ?>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img class="custom-nature" src=<?=SITE_TEMPLATE_PATH?>/images/nature.jpg alt="#">
+                </div>
+                <div class="custom-menu">
+                    <?$APPLICATION->IncludeComponent("bitrix:menu", "top", array(
+                        "ROOT_MENU_TYPE" => "top",
+                        "MENU_CACHE_TYPE" => "Y",
+                        "MENU_CACHE_TIME" => "36000000",
+                        "MENU_CACHE_USE_GROUPS" => "Y",
+                        "MENU_CACHE_GET_VARS" => array(
+                        ),
+                        "MAX_LEVEL" => "1",
+                        "CHILD_MENU_TYPE" => "left",
+                        "USE_EXT" => "N",
+                        "ALLOW_MULTI_SELECT" => "N"
+                    ),
+                        false
+                    );?>
+                </div>
+            </div>
 
 			<div id="panel"><?$APPLICATION->ShowPanel();?></div>
-
-			<div id="header">
-				<table>
-					<tr>
-						<td id="logo"><a href="<?=SITE_DIR?>" title="<?=GetMessage("HDR_GOTO_MAIN")?>"><?$APPLICATION->IncludeFile(
-									SITE_DIR."include/company_name.php",
-									Array(),
-									Array("MODE"=>"html")
-								);?></a></td>
-						<td id="slogan"><?$APPLICATION->IncludeFile(
-									SITE_DIR."include/company_slogan.php",
-									Array(),
-									Array("MODE"=>"html")
-								);?></td>
-					</tr>
-				</table>
-
-
-<!--				<div id="search">
-				<?/*$APPLICATION->IncludeComponent("bitrix:search.form", "flat", array(
-					"PAGE" => "#SITE_DIR#search/index.php"
-					),
-					false
-				);*/?>
-				</div>
--->			</div>
-
-<?$APPLICATION->IncludeComponent("bitrix:menu", "top", array(
-	"ROOT_MENU_TYPE" => "top",
-	"MENU_CACHE_TYPE" => "Y",
-	"MENU_CACHE_TIME" => "36000000",
-	"MENU_CACHE_USE_GROUPS" => "Y",
-	"MENU_CACHE_GET_VARS" => array(
-	),
-	"MAX_LEVEL" => "1",
-	"CHILD_MENU_TYPE" => "left",
-	"USE_EXT" => "N",
-	"ALLOW_MULTI_SELECT" => "N"
-	),
-	false
-);?>
 
 
 			<div id="content-wrapper">
@@ -113,9 +111,5 @@ IncludeTemplateLangFile(__FILE__);
 							false
 						);?>
 						</div>
-						<div id="workarea">
-							<div id="workarea-inner">
-							<h5 class="h5-custom">
                                 <?$APPLICATION->ShowTitle(false);?>
-                                </h5>
 
