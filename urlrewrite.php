@@ -10,10 +10,10 @@ $arUrlRewrite=array (
   ),
   1 => 
   array (
-    'CONDITION' => '#^/news/#',
+    'CONDITION' => '#^/romans/#',
     'RULE' => '',
     'ID' => 'bitrix:news',
-    'PATH' => '/news/index.php',
+    'PATH' => '/romans/index.php',
     'SORT' => 100,
   ),
 );
