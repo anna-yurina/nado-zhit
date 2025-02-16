@@ -89,15 +89,37 @@ table.data-table tr.alt-row { background-color: #F0F0F0; }
 	font-style: italic;
 }
 
-.custom-logo {
+.custom-logo-main {
 	color: green;
 	text-decoration: none;
 }
 
-.custom-logo-div {
+.custom-logo-div-main {
 	font-family: "Bradley Hand ITC", cursive;
 	font-size: 92px;
 	font-style: italic;
 	margin-top: 50px;
 	margin-left: 150px;
 }
+
+.header-inner {
+	display: flex;
+	align-items: center;
+}
+.custom-logo-inner {
+	color: blue;
+	text-decoration: none;
+	font-family: "Bradley Hand ITC", cursive;
+	font-size: 30px;
+	font-style: italic;
+	margin-left: 32px;
+
+}
+
+.custom-bc {
+	display: flex;
+	margin-left: 32px;
+	font-family: "Times New Roman", serif;
+
+}
+
