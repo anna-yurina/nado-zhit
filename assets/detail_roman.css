@@ -1,4 +1,15 @@
 .covers {
     width: 100%;
-    border-radius: 50%;
+    /*border-radius: 50%;*/
+}
+
+.book_name {
+    font-family: 'Times New Roman', serif;
+    margin: 20px;
+    font-size: 20px;
+}
+
+.book_description {
+    font-family: 'Times New Roman', serif;
+    text-align: justify;
 }
