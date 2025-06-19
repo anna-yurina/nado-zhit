@@ -1,0 +1,32 @@
+.button-operators{
+    margin: 10px;
+}
+
+.color-switch-background-yellow {
+    background-color: yellow;
+}
+
+.color-switch-background-green {
+    background-color: green;
+}
+
+.color-switch-background-red {
+    background-color: red;
+}
+
+.color-switch-text-red {
+    color: red;
+}
+
+.color-switch-black {
+    color: white;
+    background-color: black;
+    padding: 10px;
+}
+
+.color-switch-pink {
+    color: brown;
+    background-color: pink;
+    font-weight: bold;
+    font-style: italic;
+}

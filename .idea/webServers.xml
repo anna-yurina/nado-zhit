@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2eaf3826-ac14-4dcd-88b4-f8b1f81c9c43" name="need-live-prod">
+        <fileTransfer rootFolder="/home/bitrix/www" accessType="SFTP" host="103.88.241.204" port="22" sshConfigId="b7de2f3f-323f-42ee-adef-0a78b16d992f" sshConfig="root@103.88.241.204:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
