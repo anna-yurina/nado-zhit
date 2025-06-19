@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма заявки</title>
+    <link href="/assets/css/application_form.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<h1>Заполнить формы для подачи заявок можно здесь</h1>
+<div id="container-forms">
+    <div id="form-1">
+        <div class="form-application">
+            <h2>Форма 1</h2>
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <label for="inputEmail-1" class="form-label">Эл. адрес</label>
+                    <input type="email" class="form-control" id="inputEmail-1">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPassword-1" class="form-label">Пароль</label>
+                    <input type="password" class="form-control" id="inputPassword-1">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="form-application">
+    <div class="col-12">
+        <button type="button" class="btn btn-primary" onclick="addForm()">Новая форма</button>
+        <button type="button" class="btn btn-primary" onclick="deleteForm()">Удалить форму</button>
+    </div>
+</div>
+<script src="/assets/js/application_form.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор на js</title>
+    <link href="/assets/css/calc.css" rel="stylesheet">
+</head>
+<body>
+<h1 id="heading">Калькулятор</h1>
+<form>
+    <label id="first-label">Введите первое число</label><br>
+    <input id="num1" type="number"><br>
+    <label id="second-label">Выберите действие</label><br>
+    <select id="select-operator" name="select">
+        <option value="plus">Плюс</option>
+        <option value="minus">Минус</option>
+        <option value="times">Умножить</option>
+        <option value="divide">Разделить</option>
+        <option value="exponentiation">Возвести число в степень</option>
+    </select><br>
+    <label id="third-label">Введите второе число</label><br>
+    <input id="num2" type="number">
+</form>
+<div>
+    <button id="equals" class="button-operators" onclick="execCalculator()">=</button><br>
+    <output id="result"></output>
+</div>
+<div>
+    <button type="button" id="makeRed" onclick="colorSwitch()">Magic</button>
+</div>
+<div>
+    <button type="button" id="returnButton" onclick="colorReturn()">Вернуть</button>
+</div>
+<script src="/assets/js/calc.js"></script>
+</body>
+</html>

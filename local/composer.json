@@ -1,8 +1,13 @@
 {
-    "require": {
-        "twbs/bootstrap": "5.0.2"
-    },
-    "require-dev": {
-        "symfony/var-dumper": "^6.4"
+  "require": {
+    "twbs/bootstrap": "5.0.2"
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^6.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Live\\": "php_interface/src"
     }
+  }
 }
