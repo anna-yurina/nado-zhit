@@ -1,6 +1,7 @@
 {
   "require": {
-    "twbs/bootstrap": "5.0.2"
+    "twbs/bootstrap": "5.0.2",
+    "kint-php/kint": "^6.0"
   },
   "require-dev": {
     "symfony/var-dumper": "^6.4"

@@ -95,10 +95,6 @@ $this->setFrameMode(true);
 	?>
 </div>
 <?$APPLICATION->IncludeComponent("needlive:main.feedback","",Array(
-        "USE_CAPTCHA" => "Y",
-        "OK_TEXT" => "Спасибо, ваше сообщение принято.",
-        "EMAIL_TO" => "jacka99@list.ru",
-        "REQUIRED_FIELDS" => Array("NAME","EMAIL","MESSAGE"),
-        "EVENT_MESSAGE_ID" => Array("5")
+        "pochta" => "test@test.test",
     )
 );?>
