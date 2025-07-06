@@ -10,4 +10,8 @@
  * @global CUser $USER
  */
 
-/*$this->IncludeComponentTemplate();*/
+
+//Логика обработки твоих комментариев
+
+//
+$this->IncludeComponentTemplate();
