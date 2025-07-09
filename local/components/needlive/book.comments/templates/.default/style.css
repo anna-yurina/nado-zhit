@@ -1,0 +1,104 @@
+/* === Общие стили === */
+body {
+	font-family: Arial, sans-serif;
+	color: #4b4b4b;
+}
+
+/* === Форма комментариев === */
+.comment-form {
+	background-color: #fff9f3;
+	border: 1px solid #f0e0d6;
+	border-radius: 16px;
+	padding: 25px;
+	max-width: 600px;
+	margin-top: 40px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.comment-form .mf-text {
+	font-weight: 600;
+	color: #6e4d3c;
+	margin-bottom: 5px;
+}
+
+.comment-form input[type="text"],
+.comment-form textarea {
+	width: 100%;
+	padding: 12px 14px;
+	border: 1px solid #d4bfae;
+	border-radius: 10px;
+	font-size: 15px;
+	background-color: #fffdf9;
+	color: #3f3f3f;
+	margin-bottom: 20px;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comment-form input[type="text"]:focus,
+.comment-form textarea:focus {
+	border-color: #c49b7e;
+	box-shadow: 0 0 5px rgba(196, 155, 126, 0.2);
+	outline: none;
+}
+
+.comment-form .mf-req {
+	color: #e25c3e;
+	margin-left: 3px;
+}
+
+.comment-form textarea {
+	resize: vertical;
+}
+
+.comment-form input[type="submit"] {
+	background-color: #c49b7e;
+	color: #fff;
+	border: none;
+	padding: 12px 25px;
+	font-size: 15px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.comment-form input[type="submit"]:hover {
+	background-color: #a87f65;
+}
+
+/* === Список комментариев === */
+.comments-list {
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.comment-item {
+	background-color: #fff5ea;
+	border: 1px solid #f0e0d6;
+	border-radius: 16px;
+	padding: 20px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.comment-item strong {
+	display: block;
+	font-size: 16px;
+	font-weight: 600;
+	color: #5a3d2b;
+	margin-bottom: 6px;
+}
+
+.comment-item em {
+	font-size: 13px;
+	color: #927c6a;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.comment-item p {
+	font-size: 15px;
+	line-height: 1.6;
+	color: #4b4b4b;
+	margin: 0;
+}
