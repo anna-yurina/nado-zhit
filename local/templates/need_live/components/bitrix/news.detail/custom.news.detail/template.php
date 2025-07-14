@@ -70,35 +70,10 @@ $this->setFrameMode(true);
 		<?endif?>
 		<br />
 	<?endforeach;
-	if(array_key_exists("USE_SHARE", $arParams) && $arParams["USE_SHARE"] == "Y")
-	{
-		?>
-		<div class="news-detail-share">
-			<noindex>
-			<?
-			$APPLICATION->IncludeComponent("bitrix:main.share", "", array(
-					"HANDLERS" => $arParams["SHARE_HANDLERS"],
-					"PAGE_URL" => $arResult["~DETAIL_PAGE_URL"],
-					"PAGE_TITLE" => $arResult["~NAME"],
-					"SHORTEN_URL_LOGIN" => $arParams["SHARE_SHORTEN_URL_LOGIN"],
-					"SHORTEN_URL_KEY" => $arParams["SHARE_SHORTEN_URL_KEY"],
-					"HIDE" => $arParams["SHARE_HIDE"],
-				),
-				$component,
-				array("HIDE_ICONS" => "Y")
-			);
-			?>
-			</noindex>
-		</div>
-		<?
-	}
 	?>
 </div>
-<?$APPLICATION->IncludeComponent("needlive:main.feedback","",Array(
-        "USE_CAPTCHA" => "Y",
-        "OK_TEXT" => "Спасибо, ваше сообщение принято.",
-        "EMAIL_TO" => "jacka99@list.ru",
-        "REQUIRED_FIELDS" => Array("NAME","EMAIL","MESSAGE"),
-        "EVENT_MESSAGE_ID" => Array("5")
+<?$APPLICATION->IncludeComponent("needlive:book.comments","",Array(
+        "ID" => $arResult["ID"],
+        "NAME" => $arResult["NAME"],
     )
 );?>
