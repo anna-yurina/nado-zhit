@@ -27,17 +27,17 @@ if(!empty($arResult["OK_MESSAGE"]))
 
         <div class="mf-name">
             <div class="mf-text">
-                <?= GetMessage("MFT_NAME") ?><span class="mf-req">*</span>
+                <?= GetMessage("MFT_NAME") ?><span class="mf-req"></span>
             </div>
-            <input type="text" name="user_name" value="<?= $arResult["AUTHOR_NAME"] ?>" required>
+            <input type="text" name="user_name" value="<?= $arResult["AUTHOR_NAME"] ?>">
         </div>
 
-        <div class="mf-email">
+        <!--<div class="mf-email">
             <div class="mf-text">
                 <?= GetMessage("MFT_EMAIL") ?><span class="mf-req">*</span>
             </div>
             <input type="text" name="user_email" value="<?= $arResult["AUTHOR_EMAIL"] ?>" required>
-        </div>
+        </div>-->
 
         <div class="mf-message">
             <div class="mf-text">

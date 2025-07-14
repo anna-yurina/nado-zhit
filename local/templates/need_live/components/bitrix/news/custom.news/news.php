@@ -62,7 +62,7 @@ $APPLICATION->IncludeComponent(
 endif;
 $APPLICATION->IncludeComponent(
 	"bitrix:news.list",
-	"custom.news.list",
+	"custom.news.section",
 	[
 		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 		"IBLOCK_ID" => $arParams["IBLOCK_ID"],
