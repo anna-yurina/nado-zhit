@@ -36,5 +36,4 @@ while ($arComment = $rsData->fetch()) {
 $arResult["COMMENTS"] = $comments;
 $arResult["NAME"] = $arParams['NAME'];
 
-
 $this->IncludeComponentTemplate();

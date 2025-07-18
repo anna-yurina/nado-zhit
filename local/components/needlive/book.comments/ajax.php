@@ -14,8 +14,7 @@ class FeedbackAjaxController extends Controller
             ],
         ];
     }
-
-    public function sendCommentAction($comment, $idBook)
+    public function sendCommentAction($comment, $idBook, $userName)
     {
         Loader::includeModule('highloadblock');
         $hlblock = HighloadBlockTable::getById(1)->fetch();
@@ -27,6 +26,7 @@ class FeedbackAjaxController extends Controller
         $result = $entityClass::add([
             'UF_COMMENT' => $comment,
             'UF_BIND_BOOK' => $idBook,
+            'UF_NAME' => $userName,
         ]);
 
         if ($result->isSuccess()) {

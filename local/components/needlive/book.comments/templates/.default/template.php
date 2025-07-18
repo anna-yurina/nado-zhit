@@ -27,9 +27,9 @@ if(!empty($arResult["OK_MESSAGE"]))
 
         <div class="mf-name">
             <div class="mf-text">
-                <?= GetMessage("MFT_NAME") ?><span class="mf-req"></span>
+                <?= GetMessage("MFT_NAME")?><span class="mf-req"></span>
             </div>
-            <input type="text" name="user_name" value="<?= $arResult["AUTHOR_NAME"] ?>">
+            <input type="text" id="send-form-name" name="user_name" value="<?= $arResult["AUTHOR_NAME"] ?>">
         </div>
 
         <!--<div class="mf-email">
@@ -54,7 +54,11 @@ if(!empty($arResult["OK_MESSAGE"]))
         <div class="comments-list">
             <?php foreach ($arResult["COMMENTS"] as $comment): ?>
                 <div class="comment-item">
-                    <strong><?= $arResult['NAME'] ?></strong>
+                    <?if ($comment["UF_NAME"]):?>
+                        <strong><?= $comment["UF_NAME"] ?></strong>
+                    <?else:?>
+                        <strong>Аноним</strong>
+                    <?endif;?>
                     <em><?= htmlspecialchars($comment["UF_DATE"]) ?></em>
                     <p><?= nl2br(htmlspecialchars($comment["UF_COMMENT"])) ?></p>
                 </div>
@@ -69,6 +73,8 @@ if(!empty($arResult["OK_MESSAGE"]))
         BX.CustomFeedback = new CustomFeedback({
             idFormComment: 'send-form-comment',
             idBook: '<?= CUtil::JSEscape($arParams["ID"])?>',
+            idUserName: 'send-form-name',
+            idTextComment: 'comment',
         });
     });
 </script>
