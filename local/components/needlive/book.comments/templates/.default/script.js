@@ -2,6 +2,8 @@ class CustomFeedback {
     constructor(parameters) {
         this.idFormComment = parameters.idFormComment;
         this.idBook = parameters.idBook;
+        this.idUserName = parameters.idUserName;
+        this.idTextComment = parameters.idTextComment;
         this.init()
     }
 
@@ -11,7 +13,8 @@ class CustomFeedback {
 
     sendComment() {
         event.preventDefault()
-        let textComment= document.getElementById("comment");
+        let textComment= document.getElementById(this.idTextComment);
+        let userName = document.getElementById(this.idUserName);
 
         BX.ajax.runComponentAction(
             "needlive:book.comments",
@@ -23,6 +26,7 @@ class CustomFeedback {
                 data: {
                     comment: textComment.value,
                     idBook: this.idBook,
+                    userName: userName.value,
                 },
             }
         ).then(function (success) {
