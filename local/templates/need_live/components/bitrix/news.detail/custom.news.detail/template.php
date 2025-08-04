@@ -38,11 +38,26 @@ $this->setFrameMode(true);
 		<?if($arParams["DISPLAY_TOP_PAGER"]):?><?=$arResult["NAV_STRING"]?><br /><?endif;?>
 		<?echo $arResult["NAV_TEXT"];?>
 		<?if($arParams["DISPLAY_BOTTOM_PAGER"]):?><br /><?=$arResult["NAV_STRING"]?><?endif;?>
-	<?elseif($arResult["DETAIL_TEXT"] <> ''):?>
-		<?echo $arResult["DETAIL_TEXT"];?>
-	<?else:?>
-		<?echo $arResult["PREVIEW_TEXT"];?>
-	<?endif?>
+
+    <?elseif($arResult["DETAIL_TEXT"] <> ''):?>
+        <div class="article-content">
+            <?= $arResult["CURRENT_TEXT"] ?>
+        </div>
+
+        <?php if ($arResult["TOTAL_PAGES"] > 1): ?>
+            <div class="pagination">
+                <?php for ($i = 1; $i <= $arResult["TOTAL_PAGES"]; $i++): ?>
+                    <a href="?page=<?= $i ?>" class="<?= $i == $arResult["CURRENT_PAGE"] ? 'active' : '' ?>">
+                        Страница <?= $i ?>
+                    </a>
+                <?php endfor; ?>
+            </div>
+        <?php endif; ?>
+    <?else:?>
+        <?= $arResult["PREVIEW_TEXT"] ?>
+    <?endif?>
+
+
 	<div style="clear:both"></div>
 	<br />
 	<?foreach($arResult["FIELDS"] as $code=>$value):
