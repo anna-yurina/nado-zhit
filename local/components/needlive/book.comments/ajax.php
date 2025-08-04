@@ -22,12 +22,24 @@ class FeedbackAjaxController extends Controller
         $entity = HighloadBlockTable::compileEntity($hlblock);
 
         $entityClass = $entity->getDataClass();
-
+ //1 способ---------------------------------------
         $result = $entityClass::add([
             'UF_COMMENT' => $comment,
             'UF_BIND_BOOK' => $idBook,
             'UF_NAME' => $userName,
         ]);
+//---------------------------------------
+
+//2 способ---------------------------------------
+
+        $test = [
+            'UF_COMMENT' => $comment,
+            'UF_BIND_BOOK' => $idBook,
+            'UF_NAME' => $userName,
+        ];
+
+        $result = $entityClass::add($test);
+//---------------------------------------
 
         if ($result->isSuccess()) {
             return $result->getId();

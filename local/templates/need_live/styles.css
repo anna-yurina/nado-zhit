@@ -36,18 +36,110 @@ hr, .hr
 }
 
 #workarea ul { list-style-type: none;  padding:0; margin: 0 0 0 1.5em;}
-#workarea ul li:before { content:'\2014\a0'; }
-#workarea li
-{
-	behavior:expression( !this.before  ? this.before = this.innerHTML = '<span class="dash">&mdash;&nbsp;</span>' + this.innerHTML :'' );
-	text-indent:-1.35em;
-	margin: 0.6em 0
-}
-
-#workarea ul ul { padding:0 0 0 1.5em; margin: 0.6em 0}
 
 
 table.data-table { width: 100%; border-bottom: 1px solid #F0F0F0; border-top: 1px solid #F0F0F0}
 table.data-table th { text-align: left;}
 table.data-table td, table.data-table th { padding: 1em; font-size: 0.85em;}
 table.data-table tr.alt-row { background-color: #F0F0F0; }
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+
+.mainpage-hero {
+	position: relative;
+	height: 100vh;
+	background-image: url('/upload/hero-image.jpg'); /* замените путь */
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	text-align: center;
+}
+
+.hero-content {
+	background-color: rgba(255, 255, 255, 0.8); /* светлая полупрозрачная подложка */
+	padding: 50px 30px;
+	border-radius: 12px;
+	max-width: 800px;
+	width: 100%;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.hero-title {
+	font-family: 'Playfair Display', serif;
+	font-size: 64px;
+	color: #2e7d32; /* тёпло-зелёный */
+	margin-bottom: 10px;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
+}
+
+.hero-subtitle {
+	font-family: 'Playfair Display', serif;
+	font-size: 28px;
+	color: #2e7d32;
+	margin-bottom: 34px;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
+}
+
+.hero-menu {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 15px;
+}
+
+.hero-menu a {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 10px 20px;
+	border-radius: 6px;
+	background-color: rgba(255, 255, 255, 0.7); /* полупрозрачный белый фон */
+	color: #000;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	border: 1px solid transparent;
+}
+
+.hero-menu a:hover {
+	background-color: #fff;
+	color: #000;
+	border: 1px solid #aaa;
+}
+
+/*Для 404*/
+.page-404 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	min-height: 80vh;
+	padding: 40px 20px;
+	background-color: #f9f9f9;
+}
+
+.page-404 .image {
+	max-width: 200px;
+	margin-bottom: 20px;
+}
+
+.page-404 .message {
+	font-size: 24px;
+	color: #333;
+}
+
+.page-404 .sitemap {
+	max-width: 800px;
+	width: 100%;
+	margin: 0;
+	text-align: left;
+}
+
+.page-404 h2 {
+	font-size: 20px;
+	margin-bottom: 10px;
+	color: #555;
+}
