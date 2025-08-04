@@ -54,7 +54,7 @@ $APPLICATION->IncludeComponent("bitrix:news","custom.news",Array(
         "PAGER_BASE_LINK" => "",
         "PAGER_PARAMS_NAME" => "arrPager",
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-        "USE_PERMISSIONS" => "Y",
+        "USE_PERMISSIONS" => "N",
         "GROUP_PERMISSIONS" => Array("1"),
         "CACHE_TYPE" => "N",
         "DISPLAY_TOP_PAGER" => "N",
