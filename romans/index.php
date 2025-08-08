@@ -29,7 +29,7 @@ $APPLICATION->IncludeComponent("bitrix:news","custom.news",Array(
         "LIST_FIELD_CODE" => Array(),
         "LIST_PROPERTY_CODE" => Array(),
         "HIDE_LINK_WHEN_NO_DETAIL" => "Y",
-        "DISPLAY_NAME" => "Y",
+        "DISPLAY_NAME" => "N",
         "META_KEYWORDS" => "-",
         "META_DESCRIPTION" => "-",
         "BROWSER_TITLE" => "-",

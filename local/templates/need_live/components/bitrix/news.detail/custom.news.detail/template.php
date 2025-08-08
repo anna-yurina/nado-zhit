@@ -14,66 +14,98 @@ $this->setFrameMode(true);
 ?>
 
 <div class="news-detail">
-	<?if((!isset($arParams["DISPLAY_PICTURE"]) || $arParams["DISPLAY_PICTURE"]!="N") && is_array($arResult["DETAIL_PICTURE"])):?>
-		<img
-			class="detail_picture"
-			border="0"
-			src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>"
-			width="<?=$arResult["DETAIL_PICTURE"]["WIDTH"]?>"
-			height="<?=$arResult["DETAIL_PICTURE"]["HEIGHT"]?>"
-			alt="<?=$arResult["DETAIL_PICTURE"]["ALT"]?>"
-			title="<?=$arResult["DETAIL_PICTURE"]["TITLE"]?>"
-			/>
-	<?endif?>
-	<?if((!isset($arParams["DISPLAY_DATE"]) || $arParams["DISPLAY_DATE"]!="N") && $arResult["DISPLAY_ACTIVE_FROM"]):?>
-		<span class="news-date-time"><?=$arResult["DISPLAY_ACTIVE_FROM"]?></span>
-	<?endif;?>
-	<?if((!isset($arParams["DISPLAY_NAME"]) || $arParams["DISPLAY_NAME"]!="N") && $arResult["NAME"]):?>
-		<h3><?=$arResult["NAME"]?></h3>
-	<?endif;?>
-	<?if((!isset($arParams["DISPLAY_PREVIEW_TEXT"]) || $arParams["DISPLAY_PREVIEW_TEXT"]!="N") && ($arResult["FIELDS"]["PREVIEW_TEXT"] ?? '') !== ''):?>
-		<p><?=$arResult["FIELDS"]["PREVIEW_TEXT"];unset($arResult["FIELDS"]["PREVIEW_TEXT"]);?></p>
-	<?endif;?>
-	<?if($arResult["NAV_RESULT"]):?>
-		<?if($arParams["DISPLAY_TOP_PAGER"]):?><?=$arResult["NAV_STRING"]?><br /><?endif;?>
-		<?echo $arResult["NAV_TEXT"];?>
-		<?if($arParams["DISPLAY_BOTTOM_PAGER"]):?><br /><?=$arResult["NAV_STRING"]?><?endif;?>
-	<?elseif($arResult["DETAIL_TEXT"] <> ''):?>
-		<?echo $arResult["DETAIL_TEXT"];?>
-	<?else:?>
-		<?echo $arResult["PREVIEW_TEXT"];?>
-	<?endif?>
-	<div style="clear:both"></div>
-	<br />
-	<?foreach($arResult["FIELDS"] as $code=>$value):
-		if ('PREVIEW_PICTURE' == $code || 'DETAIL_PICTURE' == $code)
-		{
-			?><?=GetMessage("IBLOCK_FIELD_".$code)?>:&nbsp;<?
-			if (!empty($value) && is_array($value))
-			{
-				?><img border="0" src="<?=$value["SRC"]?>" width="<?=$value["WIDTH"]?>" height="<?=$value["HEIGHT"]?>"><?
-			}
-		}
-		else
-		{
-			?><?=GetMessage("IBLOCK_FIELD_".$code)?>:&nbsp;<?=$value;?><?
-		}
-		?><br />
-	<?endforeach;
-	foreach($arResult["DISPLAY_PROPERTIES"] as $pid=>$arProperty):?>
+    <?if((!isset($arParams["DISPLAY_PICTURE"]) || $arParams["DISPLAY_PICTURE"]!="N") && is_array($arResult["DETAIL_PICTURE"])):?>
+        <img
+                class="detail_picture"
+                border="0"
+                src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>"
+                width="<?=$arResult["DETAIL_PICTURE"]["WIDTH"]?>"
+                height="<?=$arResult["DETAIL_PICTURE"]["HEIGHT"]?>"
+                alt="<?=$arResult["DETAIL_PICTURE"]["ALT"]?>"
+                title="<?=$arResult["DETAIL_PICTURE"]["TITLE"]?>"
+        />
+    <?endif?>
 
-		<?=$arProperty["NAME"]?>:&nbsp;
-		<?if(is_array($arProperty["DISPLAY_VALUE"])):?>
-			<?=implode("&nbsp;/&nbsp;", $arProperty["DISPLAY_VALUE"]);?>
-		<?else:?>
-			<?=$arProperty["DISPLAY_VALUE"];?>
-		<?endif?>
-		<br />
-	<?endforeach;
-	?>
+    <?if((!isset($arParams["DISPLAY_DATE"]) || $arParams["DISPLAY_DATE"]!="N") && $arResult["DISPLAY_ACTIVE_FROM"]):?>
+        <span class="news-date-time"><?=$arResult["DISPLAY_ACTIVE_FROM"]?></span>
+    <?endif;?>
+
+    <?if((!isset($arParams["DISPLAY_NAME"]) || $arParams["DISPLAY_NAME"]!="N") && $arResult["NAME"]):?>
+        <h3><?=$arResult["NAME"]?></h3>
+    <?endif;?>
+
+    <?if((!isset($arParams["DISPLAY_PREVIEW_TEXT"]) || $arParams["DISPLAY_PREVIEW_TEXT"]!="N") && ($arResult["FIELDS"]["PREVIEW_TEXT"] ?? '') !== ''):?>
+        <p><?=$arResult["FIELDS"]["PREVIEW_TEXT"];unset($arResult["FIELDS"]["PREVIEW_TEXT"]);?></p>
+    <?endif;?>
+
+    <?if($arResult["NAV_RESULT"]):?>
+        <?if($arParams["DISPLAY_TOP_PAGER"]):?><?=$arResult["NAV_STRING"]?><br /><?endif;?>
+        <?=$arResult["NAV_TEXT"];?>
+        <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?><br /><?=$arResult["NAV_STRING"]?><?endif;?>
+
+    <?elseif($arResult["DETAIL_TEXT"] <> ''):?>
+        <div class="article-content">
+            <?= $arResult["CURRENT_TEXT"] ?>
+        </div>
+
+        <?php if ($arResult["TOTAL_PAGES"] > 1): ?>
+            <div class="pagination">
+                <?php
+                $total = $arResult["TOTAL_PAGES"];
+                $current = $arResult["CURRENT_PAGE"];
+                $range = 2;
+                $dotsShown = false;
+
+                for ($i = 1; $i <= $total; $i++) {
+                    if (
+                        $i == 1 ||
+                        $i == $total ||
+                        ($i >= $current - $range && $i <= $current + $range)
+                    ) {
+                        if ($i == $current): ?>
+                            <span class="active"><?= $i ?></span>
+                        <?php else: ?>
+                            <a href="?page=<?= $i ?>"><?= $i ?></a>
+                        <?php endif;
+                        $dotsShown = false;
+                    } elseif (!$dotsShown) {
+                        echo '<span class="dots">...</span>';
+                        $dotsShown = true;
+                    }
+                }
+                ?>
+            </div>
+        <?php endif; ?>
+
+    <?else:?>
+        <?= $arResult["PREVIEW_TEXT"] ?>
+    <?endif?>
+
+    <div style="clear:both"></div>
+    <br />
+
+    <?foreach($arResult["FIELDS"] as $code=>$value):
+        if ('PREVIEW_PICTURE' == $code || 'DETAIL_PICTURE' == $code):?>
+            <?=GetMessage("IBLOCK_FIELD_".$code)?>:&nbsp;
+            <?if (!empty($value) && is_array($value)):?>
+                <img border="0" src="<?=$value["SRC"]?>" width="<?=$value["WIDTH"]?>" height="<?=$value["HEIGHT"]?>">
+            <?endif?>
+        <?else:?>
+            <?=GetMessage("IBLOCK_FIELD_".$code)?>:&nbsp;<?=$value;?>
+        <?endif?><br />
+    <?endforeach;?>
+
+    <?foreach($arResult["DISPLAY_PROPERTIES"] as $pid=>$arProperty):?>
+        <?=$arProperty["NAME"]?>:&nbsp;
+        <?if(is_array($arProperty["DISPLAY_VALUE"])):?>
+            <?=implode("&nbsp;/&nbsp;", $arProperty["DISPLAY_VALUE"]);?>
+        <?else:?>
+            <?=$arProperty["DISPLAY_VALUE"];?>
+        <?endif?><br />
+    <?endforeach;?>
 </div>
-<?$APPLICATION->IncludeComponent("needlive:book.comments","",Array(
-        "ID" => $arResult["ID"],
-        "NAME" => $arResult["NAME"],
-    )
-);?>
+
+<?$APPLICATION->IncludeComponent("needlive:book.comments", "", [
+    "ID" => $arResult["ID"],
+    "NAME" => $arResult["NAME"],
+]);?>
