@@ -7,7 +7,7 @@ IncludeTemplateLangFile(__FILE__);
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title><?$APPLICATION->ShowTitle()?></title>
-    <link rel="shortcut icon" type="image/x-icon" href="<?=SITE_TEMPLATE_PATH?>/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
     <link rel="stylesheet" type="text/css" href="<?=SITE_TEMPLATE_PATH?>/common.css" />
     <link rel="stylesheet" type="text/css" href="<?=SITE_TEMPLATE_PATH?>/colors.css" />
@@ -75,7 +75,7 @@ IncludeTemplateLangFile(__FILE__);
             <div id="breadcrumb">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "custom_breadcrumb", array(
+                        <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "custom.breadcrumb", array(
                             "START_FROM" => "1",
                             "PATH" => "",
                             "SITE_ID" => SITE_ID
