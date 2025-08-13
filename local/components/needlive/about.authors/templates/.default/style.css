@@ -1,0 +1,90 @@
+.author-section {
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.author-name {
+	font-size: 2rem;
+	margin-bottom: 30px;
+	color: #2e7d32;
+}
+
+.author-row {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+	gap: 20px;
+}
+
+.author-row.reverse {
+	flex-direction: row-reverse;
+}
+
+.author-photo-wrap {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+}
+
+.author-photo {
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+	border-radius: 50%;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.author-text {
+	flex: 1;
+	font-size: 1.2rem;
+	line-height: 1.6;
+	text-align: left;
+}
+
+/* Для мобильных */
+@media (max-width: 768px) {
+	.author-row, .author-row.reverse {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.author-text {
+		text-align: center;
+	}
+}
+
+.author-links {
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+.author-links a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	border: 2px solid #2e7d32;
+	background-color: #fff;
+	transition: all 0.3s ease;
+	text-decoration: none;
+}
+
+.author-links a svg {
+	width: 20px;
+	height: 20px;
+	fill: #2e7d32;
+}
+
+.author-links a:hover {
+	background-color: #a5d6a7; /* светло-зелёный фон */
+	border-color: #a5d6a7;
+}
+
+.author-links a:hover svg {
+	fill: #2e7d32; /* тёмно-зелёная иконка */
+}
