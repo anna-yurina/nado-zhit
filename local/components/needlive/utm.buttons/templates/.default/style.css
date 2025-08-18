@@ -1,0 +1,23 @@
+.ozon-button {
+	display: inline-block;
+	padding: 12px 24px;
+	font-size: 16px;
+	font-weight: 600;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 8px;
+	background: linear-gradient(135deg, #1e88e5, #42a5f5);
+	box-shadow: 0 4px 15px rgba(30, 136, 229, 0.4);
+	transition: all 0.3s ease;
+}
+
+.ozon-button:hover {
+	background: linear-gradient(135deg, #42a5f5, #1e88e5);
+	box-shadow: 0 6px 20px rgba(30, 136, 229, 0.5);
+	transform: translateY(-2px);
+}
+
+.ozon-button:active {
+	transform: translateY(0);
+	box-shadow: 0 3px 10px rgba(30, 136, 229, 0.3);
+}
