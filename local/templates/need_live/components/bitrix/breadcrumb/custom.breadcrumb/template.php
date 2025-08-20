@@ -1,26 +1,39 @@
 <?php
-if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
-//delayed function must return a string
-if(empty($arResult))
-	return "";
+/**
+ * @global CMain $APPLICATION
+ */
+global $APPLICATION;
 
-if($arResult[count($arResult)-1]["LINK"]!="" && $arResult[count($arResult)-1]["LINK"]!=$GLOBALS["APPLICATION"]->GetCurPage(false))
-	$arResult[] = Array("TITLE"=>$GLOBALS["APPLICATION"]->GetTitle());
-?>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<?php
-$strReturn = '<li class="breadcrumb-item"><a href="/">Главная</a></li>';
-for($index = 0, $itemSize = count($arResult); $index < $itemSize; $index++)
-{
+if (empty($arResult))
+    return "";
+
+$strReturn = '';
+
+$strReturn .= '<nav class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">';
+
+$itemSize = count($arResult);
+for ($index = 0; $index < $itemSize; $index++) {
     $title = htmlspecialcharsex($arResult[$index]["TITLE"]);
-    if($arResult[$index]["LINK"] <> "" && $arResult[$index]["LINK"]!=$GLOBALS["APPLICATION"]->GetCurPage(false))
-        $strReturn .= '<li class="breadcrumb-item active"><a href="'.$arResult[$index]["LINK"].'">'.$title.'</a></li>';
-    else
-        $strReturn .= '<li id="bx_breadcrumb_'.$index.'" class="breadcrumb-item">'.$title.'</li>';
+
+    if ($arResult[$index]["LINK"] <> "" && $index != $itemSize - 1) {
+        $strReturn .= '
+            <span class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a href="' . $arResult[$index]["LINK"] . '" title="' . $title . '" itemprop="item">
+                    <span itemprop="name">' . $title . '</span>
+                </a>
+                <meta itemprop="position" content="' . ($index + 1) . '" />
+            </span>
+            <span class="breadcrumb-separator">›</span>';
+    } else {
+        $strReturn .= '
+            <span class="breadcrumb-item current">
+                <span>' . $title . '</span>
+            </span>';
+    }
 }
-?>
-<?php
-$strReturn .= '</p><b class="r0 bottom"></b>';
+
+$strReturn .= '</nav>';
+
 return $strReturn;
-?>
