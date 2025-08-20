@@ -20,12 +20,15 @@
     </div>
 </div>
 
-    <?php if (!empty($arResult['ITEMS'])): ?>
+    <?php
+    if (!empty($arResult['ITEMS'])): ?>
 <div class="author-links">
     <?php foreach($arResult["ITEMS"] as $title => $values) {?>
         <a href="<?= $values['UF_LINK']?>" target="_blank">
-            <?= $values['UF_ICON']?>
+            <?php $img_path = CFile::GetPath($values['UF_ICON']);?>
+            <?= '<img src="'.$img_path.'" width="30" alt="'.$img_path.'"/>';?>
+            <?php } ?>
         </a>
-        <?php } ?>
+
 </div>
 <?php endif;?>
