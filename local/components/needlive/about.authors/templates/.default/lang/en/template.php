@@ -1,0 +1,6 @@
+<?php
+$MESS["ABOUT_LINK_DZEN"] = "Dzen";
+$MESS["ABOUT_LINK_LITRES"] = "LitRes";
+$MESS["ABOUT_LINK_TELEGRAM"] = "Telegram";
+$MESS["ABOUT_LINK_EMAIL"] = "Email";
+$MESS["ABOUT_LINK_VK"] = "VK";
