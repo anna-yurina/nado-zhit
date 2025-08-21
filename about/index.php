@@ -5,9 +5,6 @@ $APPLICATION->SetTitle("Об авторах");
 $APPLICATION->IncludeComponent(
     "needlive:about.authors",
     "",
-    [
-        "HLBLOCK_ID" => "1"
-    ]
 );
 ?>
 

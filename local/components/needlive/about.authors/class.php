@@ -5,20 +5,21 @@ use Bitrix\Main\Entity;
 
 class AboutAuthorsComponent extends CBitrixComponent
 {
+    const HL_NAME = 'LinksToSocialMedia';
     public function executeComponent()
     {
         if (!Loader::includeModule('highloadblock')) {
             ShowError('Модуль highloadblock не установлен');
             return;
         }
-
-        $hlblockId = 2;
-        $hlblock = HL\HighloadBlockTable::getById($hlblockId)->fetch();
-
-        if (!$hlblock) {
-            ShowError('HL-блок с ID ' . $hlblockId . ' не найден');
+        $idHlblock = HL\HighloadBlockTable::getList([
+            'filter' => ['=NAME' => self::HL_NAME]
+        ])->fetch()['ID'];
+        if (!$idHlblock) {
+            ShowError('HL-блок с именем ' . self::HL_NAME . ' не найден');
             return;
         }
+        $hlblock = HL\HighloadBlockTable::getById($idHlblock)->fetch();
 
         // Компилируем сущность
         $entity = HL\HighloadBlockTable::compileEntity($hlblock);
@@ -31,7 +32,6 @@ class AboutAuthorsComponent extends CBitrixComponent
         ]);
 
         $this->arResult['ITEMS'] = $rsData->fetchAll();
-
         $this->includeComponentTemplate();
     }
 }
