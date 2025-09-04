@@ -17,6 +17,12 @@
 	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+.preview_picture {
+	width: 150px;
+	height: auto;
+	object-fit: cover;
+}
+
 .section-link {
 	text-decoration: none;
 	color: inherit;

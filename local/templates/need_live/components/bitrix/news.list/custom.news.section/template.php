@@ -16,7 +16,7 @@ $this->setFrameMode(true); ?>
             <div class="section-card">
                 <a href="<?= $section['SECTION_PAGE_URL'] ?>" class="section-link">
                     <?php if (!empty($section['PICTURE'])): ?>
-                        <img class="preview_picture" style="width: 100%; height: 100%; object-fit: cover;"
+                        <img class="preview_picture"
                              src="<?= $section["PICTURE"]["SRC"] ?>"
                              width="<?= $section["PICTURE"]["WIDTH"] ?>"
                              height="<?= $section["PICTURE"]["HEIGHT"] ?>"

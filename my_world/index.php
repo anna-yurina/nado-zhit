@@ -1,17 +1,18 @@
 <?php
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 
 global $APPLICATION;
 
-$APPLICATION->SetTitle("Прожито");
-$APPLICATION->IncludeComponent("bitrix:news","custom.news",Array(
+$APPLICATION->SetTitle("Мой мир");
+
+$APPLICATION->IncludeComponent("bitrix:news", "custom.news", array(
         "DISPLAY_DATE" => "Y",
         "DISPLAY_PICTURE" => "Y",
         "DISPLAY_PREVIEW_TEXT" => "Y",
         "SEF_MODE" => "Y",
         "AJAX_MODE" => "N",
-        "IBLOCK_TYPE" => "books",
-        "IBLOCK_ID" => "10",
+        "IBLOCK_TYPE" => "articles",
+        "IBLOCK_ID" => "9",
         "NEWS_COUNT" => "20",
         "USE_SEARCH" => "N",
         "USE_RSS" => "N",
@@ -26,8 +27,8 @@ $APPLICATION->IncludeComponent("bitrix:news","custom.news",Array(
         "CHECK_DATES" => "Y",
         "PREVIEW_TRUNCATE_LEN" => "",
         "LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
-        "LIST_FIELD_CODE" => Array(),
-        "LIST_PROPERTY_CODE" => Array(),
+        "LIST_FIELD_CODE" => array(),
+        "LIST_PROPERTY_CODE" => array(),
         "HIDE_LINK_WHEN_NO_DETAIL" => "Y",
         "DISPLAY_NAME" => "N",
         "META_KEYWORDS" => "-",
@@ -35,8 +36,8 @@ $APPLICATION->IncludeComponent("bitrix:news","custom.news",Array(
         "BROWSER_TITLE" => "-",
         "DETAIL_SET_CANONICAL_URL" => "Y",
         "DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
-        "DETAIL_FIELD_CODE" => Array(),
-        "DETAIL_PROPERTY_CODE" => Array(),
+        "DETAIL_FIELD_CODE" => array(),
+        "DETAIL_PROPERTY_CODE" => array(),
         "DETAIL_DISPLAY_TOP_PAGER" => "N",
         "DETAIL_DISPLAY_BOTTOM_PAGER" => "N",
         "DETAIL_PAGER_TITLE" => "Страница",
@@ -55,7 +56,7 @@ $APPLICATION->IncludeComponent("bitrix:news","custom.news",Array(
         "PAGER_PARAMS_NAME" => "arrPager",
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
         "USE_PERMISSIONS" => "N",
-        "GROUP_PERMISSIONS" => Array("1"),
+        "GROUP_PERMISSIONS" => array("1"),
         "CACHE_TYPE" => "N",
         "DISPLAY_TOP_PAGER" => "N",
         "DISPLAY_BOTTOM_PAGER" => "N",
@@ -65,14 +66,14 @@ $APPLICATION->IncludeComponent("bitrix:news","custom.news",Array(
         "PAGER_DESC_NUMBERING" => "N",
         "PAGER_SHOW_ALL" => "Y",
         "FILTER_NAME" => "",
-        "FILTER_FIELD_CODE" => Array(),
-        "FILTER_PROPERTY_CODE" => Array(),
+        "FILTER_FIELD_CODE" => array(),
+        "FILTER_PROPERTY_CODE" => array(),
         "NUM_NEWS" => "20",
         "NUM_DAYS" => "30",
         "YANDEX" => "Y",
         "MAX_VOTE" => "5",
-        "VOTE_NAMES" => Array("0", "1", "2", "3", "4"),
-        "CATEGORY_IBLOCK" => Array(),
+        "VOTE_NAMES" => array("0", "1", "2", "3", "4"),
+        "CATEGORY_IBLOCK" => array(),
         "CATEGORY_CODE" => "CATEGORY",
         "CATEGORY_ITEMS_COUNT" => "5",
         "MESSAGES_PER_PAGE" => "10",
@@ -84,18 +85,18 @@ $APPLICATION->IncludeComponent("bitrix:news","custom.news",Array(
         "SHOW_LINK_TO_FORUM" => "Y",
         "POST_FIRST_MESSAGE" => "Y",
         "SEF_FOLDER" => "/",
-        "SEF_URL_TEMPLATES" => Array(
-            "detail" => "lived/#SECTION_CODE#/#ELEMENT_CODE#/",
-            "news" => "lived/",
-            "section" => "lived/#SECTION_CODE#/",
+        "SEF_URL_TEMPLATES" => array(
+            "detail" => "my_world/#SECTION_CODE#/#ELEMENT_CODE#/",
+            "news" => "my_world/",
+            "section" => "my_world/#SECTION_CODE#/",
         ),
         "AJAX_OPTION_JUMP" => "N",
         "AJAX_OPTION_STYLE" => "Y",
         "AJAX_OPTION_HISTORY" => "N",
-        "VARIABLE_ALIASES" => Array(
-            "detail" => Array(),
-            "news" => Array(),
-            "section" => Array(),
+        "VARIABLE_ALIASES" => array(
+            "detail" => array(),
+            "news" => array(),
+            "section" => array(),
         ),
         "USE_SHARE" => "N",
         "SHARE_HIDE" => "Y",
@@ -107,4 +108,4 @@ $APPLICATION->IncludeComponent("bitrix:news","custom.news",Array(
 );
 
 ?>
-<?php require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<?php require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

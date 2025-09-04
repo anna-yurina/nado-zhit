@@ -1,5 +1,5 @@
 <?php
-$sSectionName = "Рассказы";
+$sSectionName = "Мой мир";
 $arDirProperties = Array(
 
 );
