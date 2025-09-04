@@ -14,7 +14,7 @@
 //Логика обработки твоих комментариев
 
 //
-dd($arParams);
+
 use Bitrix\Main\Loader;
 use Bitrix\Highloadblock\HighloadBlockTable;
 

@@ -14,7 +14,7 @@ $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/mainpage.css");
         <nav class="hero-menu">
             <a href="/about/">Об авторах</a>
             <a href="/romans/">Романы</a>
-            <a href="/stories/">Мой мир</a>
+            <a href="/my_world/">Мой мир</a>
             <a href="/lived/">Прожито</a>
             <a href="/guest_album/">Альбом для гостей</a>
         </nav>
