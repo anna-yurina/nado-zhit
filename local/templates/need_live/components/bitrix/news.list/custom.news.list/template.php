@@ -1,4 +1,4 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+<? if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 /** @var array $arParams */
 /** @var array $arResult */
 /** @var CBitrixComponentTemplate $this */
@@ -8,6 +8,11 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+if ($arResult['SECTION']['PATH'][0]['NAME']) {
+    global $APPLICATION;
+    $APPLICATION->SetTitle($arResult['SECTION']['PATH'][0]['NAME']);
+}
+
 ?>
 <div class="news-list">
 <?if($arParams["DISPLAY_TOP_PAGER"]):?>
