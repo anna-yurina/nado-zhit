@@ -11,6 +11,10 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+if ($arResult['NAME']) {
+    global $APPLICATION;
+    $APPLICATION->SetTitle($arResult['NAME']);
+}
 ?>
 
 <div class="news-detail">

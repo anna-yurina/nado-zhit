@@ -15,8 +15,8 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Рассказы",
-		"stories/",
+		"Мой мир",
+		"my_world/",
 		Array(), 
 		Array(), 
 		"" 
